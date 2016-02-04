@@ -1,0 +1,37 @@
+.burger-block {
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	color: @main-bg-color;
+	font-size: 3.5rem;
+	z-index: 50;
+	&:hover {
+			color: darken(@main-bg-color, 5%);
+		}
+		&:active {
+			color: darken(@main-bg-color, 10%);
+		}
+	&__checkbox {
+		display: none;
+	}
+	&__burger {
+		
+		&--main-header {
+			
+			
+		}
+	}
+	@media ( min-width: 768px) {
+		display: none;
+	}
+}
+#burger-block__checkbox:checked ~ .burger-block {
+	color: @color-white;
+}
+#burger-block__checkbox:checked ~ .main-nav {
+	display: block;
+}
+.fa {
+	font-size: inherit;
+}

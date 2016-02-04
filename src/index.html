@@ -8,36 +8,37 @@
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
    <div class="container">
         <header class="main-header">
-            <nav class="navbar navbar-default">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#">Информация <h1>H!</h1></a></li>
-                            <li><a href="#">Фото и видео</a></li>
+			<input class="burger-block__checkbox" type="checkbox" id="burger-block__checkbox" name="checkbox-burger">
+			<label class="burger-block burger-blockr--main-header" for="burger-block__checkbox">
+				<i class="fa fa-bars"></i>
+			</label>
+			<a class="logo" href="#"><img src="./img/logo.png" alt="logo" width="138" height="70"></a>
+            <nav class="main-nav">
+                        <ul class="main-nav__list main-nav__list--left">
+                            <li class="main-nav__list-unit"><a href="#">Информация</a></li>
+                            <li class="main-nav__list-unit"><a href="#">Фото и видео</a></li>
                         </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Карта штата</a></li>
-                            <li><a href="#">Гостиницы</a></li>
+                        <ul class="main-nav__list main-nav__list--right">
+                            <li class="main-nav__list-unit"><a href="#">Карта штата</a></li>
+                            <li class="main-nav__list-unit"><a href="#">Гостиницы</a></li>
                         </ul>
-                    </div>
-                    <a class="logo" href="#"><img src="./img/p-logo.png" alt="logo" width="138" height="70"></a>
             </nav>
-        </header> 
-        <div class="content">JKjslkdjal</div>
+            <section class="main-header__decor">
+            	<img class="main-header__title"
+            	  srcset="            	"
+            	 alt="main-header__title">
+            </section>
+         </header> 
+        <div class="content"></div>
     </div>   
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>

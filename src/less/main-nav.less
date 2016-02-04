@@ -1,0 +1,138 @@
+.main-nav {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	color: @color-white;
+	font-family: @font-family-sans-serif;
+	z-index: 25;
+	&:after {
+		display: table;
+		content: "";
+	}
+	&__list {
+		&:not(:last-child) {
+			.main-nav__list-unit {
+				border-bottom: 1px solid @color-border-gray;
+			}
+			.main-nav__list-unit:not(:first-child) {
+				border-top: 1px solid @color-border-blue;
+			}
+		}
+		&:not(:first-child) {
+			.main-nav__list-unit {
+				border-top: 1px solid @color-border-blue;
+			}
+			.main-nav__list-unit:not(:last-child) {
+				border-bottom: 1px solid @color-border-gray;
+			}
+			.main-nav__list-unit:last-child {
+				box-shadow: 0 -1px 2px 0 rgba(0,0,0, 0.2) inset,
+			}
+		}
+		
+		
+	}
+	&__list-unit {
+		display: block;
+		background-color: @main-bg-color;
+			a {		
+				display: block;
+				padding: 18px 0;
+				font: 700 1.8rem/1.8 @font-family-sans-serif;
+				color: inherit;
+				text-transform: uppercase;
+				text-decoration: none;
+				text-align: center;
+				&:hover {
+					background-color: darken(@main-bg-color, 5%);
+				}
+				&:active {
+					background-color: darken(@main-bg-color, 20%);
+					opacity: .3;
+				}
+			}
+		}
+	@media ( min-width: 768px) {
+		display: block;
+		position: static;
+		color: @color-black;
+		&__list {
+			&--left {
+				float: left;
+				.main-nav__list-unit {
+					padding: 0 31px;
+				}
+			}
+			&--right {
+				float: right;
+				.main-nav__list-unit {
+					padding: 0 33px;
+				}
+			}
+			&:not(:last-child) {
+				.main-nav__list-unit {
+					border-bottom: none;
+				}
+				.main-nav__list-unit:not(:first-child) {
+					border-top: none;
+				}
+			}
+			&:not(:first-child) {
+				.main-nav__list-unit {
+					border-top: none;
+				}
+				.main-nav__list-unit:not(:last-child) {
+					border-bottom: none;
+				}
+				.main-nav__list-unit:last-child {
+					box-shadow: none;
+				}
+			}
+
+
+		}
+		&__list-unit {
+			display: inline-block;
+			vertical-align: top;
+			background-color: @color-white;
+			border: none;
+				a {		
+					padding: 16px 0 18px;
+					font: 700 1.4rem/2.6 @font-family-sans-serif;
+					&:hover {
+						background-color: @color-white;
+						color: lighten(@main-bg-color, 5%);
+					}
+					&:active {
+						background-color: @color-white;
+						color: @color-gray;
+						opacity: 1;
+					}
+				}
+			}
+
+	}
+	@media ( min-width: 1200px ) {
+		color: @color-black;
+		&__list {
+			&--left {
+				.main-nav__list-unit {
+					padding: 0 72px;
+				}
+			}
+			&--right {
+				.main-nav__list-unit {
+					padding: 0 72px;
+				}
+			}
+		}
+		&__list-unit {
+				a {		
+					padding: 16px 0 18px;
+				}
+			}
+		
+	}
+}

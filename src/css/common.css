@@ -19,36 +19,171 @@
 }
 .main-header {
   position: relative;
+  height: 55px;
 }
-.navbar {
-  background-color: #81b3d2;
+.main-header__decor {
+  padding: 47px 0;
+  background: url("../img/bg.jpg") no-repeat 50% 50%;
+  background-size: cover;
 }
-.navbar-nav {
-  margin: 0;
-}
-.navbar-collapse {
-  padding-top: 10px;
-}
-.navbar-default .navbar-nav > li > a {
+.main-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
   color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  font: "PT Sans", Arial, sans-serif;
-  font-weight: 700;
+  font-family: "PT Sans", Arial, sans-serif;
+  z-index: 25;
 }
-.navbar-default .navbar-toggle {
-  border: none;
+.main-nav:after {
+  display: table;
+  content: "";
 }
-.navbar-toggle {
-  border: none;
+.main-nav__list:not(:last-child) .main-nav__list-unit {
+  border-bottom: 1px solid #678fa8;
 }
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: inherit;
+.main-nav__list:not(:last-child) .main-nav__list-unit:not(:first-child) {
+  border-top: 1px solid #9ac2db;
 }
-.navbar-toggle:hover .icon-bar {
+.main-nav__list:not(:first-child) .main-nav__list-unit {
+  border-top: 1px solid #9ac2db;
+}
+.main-nav__list:not(:first-child) .main-nav__list-unit:not(:last-child) {
+  border-bottom: 1px solid #678fa8;
+}
+.main-nav__list:not(:first-child) .main-nav__list-unit:last-child {
+  box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+}
+.main-nav__list-unit {
+  display: block;
   background-color: #81b3d2;
 }
-.navbar-header {
-  background-color: #fff;
+.main-nav__list-unit a {
+  display: block;
+  padding: 18px 0;
+  font: 700 1.8rem/1.8 "PT Sans", Arial, sans-serif;
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+.main-nav__list-unit a:hover {
+  background-color: #6ea8cb;
+}
+.main-nav__list-unit a:active {
+  background-color: #3e84af;
+  opacity: .3;
+}
+@media (min-width: 768px) {
+  .main-nav {
+    display: block;
+    position: static;
+    color: #000;
+  }
+  .main-nav__list--left {
+    float: left;
+  }
+  .main-nav__list--left .main-nav__list-unit {
+    padding: 0 31px;
+  }
+  .main-nav__list--right {
+    float: right;
+  }
+  .main-nav__list--right .main-nav__list-unit {
+    padding: 0 33px;
+  }
+  .main-nav__list:not(:last-child) .main-nav__list-unit {
+    border-bottom: none;
+  }
+  .main-nav__list:not(:last-child) .main-nav__list-unit:not(:first-child) {
+    border-top: none;
+  }
+  .main-nav__list:not(:first-child) .main-nav__list-unit {
+    border-top: none;
+  }
+  .main-nav__list:not(:first-child) .main-nav__list-unit:not(:last-child) {
+    border-bottom: none;
+  }
+  .main-nav__list:not(:first-child) .main-nav__list-unit:last-child {
+    box-shadow: none;
+  }
+  .main-nav__list-unit {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #fff;
+    border: none;
+  }
+  .main-nav__list-unit a {
+    padding: 16px 0 18px;
+    font: 700 1.4rem/2.6 "PT Sans", Arial, sans-serif;
+  }
+  .main-nav__list-unit a:hover {
+    background-color: #fff;
+    color: #94bed9;
+  }
+  .main-nav__list-unit a:active {
+    background-color: #fff;
+    color: #b2b2b2;
+    opacity: 1;
+  }
+}
+@media (min-width: 1200px) {
+  .main-nav {
+    color: #000;
+  }
+  .main-nav__list--left .main-nav__list-unit {
+    padding: 0 72px;
+  }
+  .main-nav__list--right .main-nav__list-unit {
+    padding: 0 72px;
+  }
+  .main-nav__list-unit a {
+    padding: 16px 0 18px;
+  }
+}
+.burger-block {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: #81b3d2;
+  font-size: 3.5rem;
+  z-index: 50;
+}
+.burger-block:hover {
+  color: #6ea8cb;
+}
+.burger-block:active {
+  color: #5b9cc5;
+}
+.burger-block__checkbox {
+  display: none;
+}
+@media (min-width: 768px) {
+  .burger-block {
+    display: none;
+  }
+}
+#burger-block__checkbox:checked ~ .burger-block {
+  color: #fff;
+}
+#burger-block__checkbox:checked ~ .main-nav {
+  display: block;
+}
+.fa {
+  font-size: inherit;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
