@@ -16,15 +16,52 @@
   left: 50%;
   top: 0;
   transform: translateX(-50%);
+  z-index: 10;
 }
 .main-header {
   position: relative;
-  height: 55px;
+}
+.main-header__wrap-top {
+  min-height: 56px;
 }
 .main-header__decor {
+  position: relative;
   padding: 47px 0;
-  background: url("../img/bg.jpg") no-repeat 50% 50%;
+  background: url("../img/bg.jpg") no-repeat 0% 0%;
   background-size: cover;
+}
+.main-header__welcome-picture {
+  margin: 0 auto;
+  display: block;
+  width: 280px;
+}
+.main-header__border-picture {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url('../img/bg_border.png') no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 25px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .main-header__welcome-picture {
+    width: 485px;
+  }
+  .main-header__decor {
+    padding: 76px 0 84px;
+  }
+  .main-header__border-picture {
+    min-height: 36px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-header__decor {
+    padding: 76px 0 84px;
+  }
+  .main-header__border-picture {
+    min-height: 57px;
+  }
 }
 .main-nav {
   display: none;
@@ -35,10 +72,6 @@
   color: #fff;
   font-family: "PT Sans", Arial, sans-serif;
   z-index: 25;
-}
-.main-nav:after {
-  display: table;
-  content: "";
 }
 .main-nav__list:not(:last-child) .main-nav__list-unit {
   border-bottom: 1px solid #678fa8;
@@ -81,6 +114,11 @@
     position: static;
     color: #000;
   }
+  .main-nav:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
   .main-nav__list--left {
     float: left;
   }
@@ -115,7 +153,7 @@
     border: none;
   }
   .main-nav__list-unit a {
-    padding: 16px 0 18px;
+    padding: 10px 0 12px;
     font: 700 1.4rem/2.6 "PT Sans", Arial, sans-serif;
   }
   .main-nav__list-unit a:hover {
@@ -138,9 +176,6 @@
   .main-nav__list--right .main-nav__list-unit {
     padding: 0 72px;
   }
-  .main-nav__list-unit a {
-    padding: 16px 0 18px;
-  }
 }
 .burger-block {
   cursor: pointer;
@@ -150,6 +185,7 @@
   color: #81b3d2;
   font-size: 3.5rem;
   z-index: 50;
+  line-height: 100%;
 }
 .burger-block:hover {
   color: #6ea8cb;
@@ -159,6 +195,12 @@
 }
 .burger-block__checkbox {
   display: none;
+}
+.burger-block .fa {
+  font-size: inherit;
+}
+.burger-block .fa-times {
+  margin-top: 5px;
 }
 @media (min-width: 768px) {
   .burger-block {
@@ -170,9 +212,6 @@
 }
 #burger-block__checkbox:checked ~ .main-nav {
   display: block;
-}
-.fa {
-  font-size: inherit;
 }
 *,
 *:after,

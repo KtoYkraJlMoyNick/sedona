@@ -6,6 +6,7 @@
 	color: @main-bg-color;
 	font-size: 3.5rem;
 	z-index: 50;
+    line-height: 100%;
 	&:hover {
 			color: darken(@main-bg-color, 5%);
 		}
@@ -22,6 +23,12 @@
 			
 		}
 	}
+    .fa {
+        font-size: inherit;
+    }
+    .fa-times {
+        margin-top: 5px;
+    }
 	@media ( min-width: 768px) {
 		display: none;
 	}
@@ -31,7 +38,4 @@
 }
 #burger-block__checkbox:checked ~ .main-nav {
 	display: block;
-}
-.fa {
-	font-size: inherit;
 }

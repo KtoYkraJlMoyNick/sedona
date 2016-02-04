@@ -7,10 +7,6 @@
 	color: @color-white;
 	font-family: @font-family-sans-serif;
 	z-index: 25;
-	&:after {
-		display: table;
-		content: "";
-	}
 	&__list {
 		&:not(:last-child) {
 			.main-nav__list-unit {
@@ -36,7 +32,7 @@
 	}
 	&__list-unit {
 		display: block;
-		background-color: @main-bg-color;
+        background-color: @main-bg-color;
 			a {		
 				display: block;
 				padding: 18px 0;
@@ -57,7 +53,12 @@
 	@media ( min-width: 768px) {
 		display: block;
 		position: static;
-		color: @color-black;
+        color: @color-black;
+        &:after {
+            display: table;
+            content: " ";
+            clear: both;
+        }
 		&__list {
 			&--left {
 				float: left;
@@ -99,7 +100,7 @@
 			background-color: @color-white;
 			border: none;
 				a {		
-					padding: 16px 0 18px;
+					padding: 10px 0 12px;
 					font: 700 1.4rem/2.6 @font-family-sans-serif;
 					&:hover {
 						background-color: @color-white;
@@ -128,11 +129,6 @@
 				}
 			}
 		}
-		&__list-unit {
-				a {		
-					padding: 16px 0 18px;
-				}
-			}
 		
 	}
 }

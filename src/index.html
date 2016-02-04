@@ -14,28 +14,94 @@
 <body>
    <div class="container">
         <header class="main-header">
-			<input class="burger-block__checkbox" type="checkbox" id="burger-block__checkbox" name="checkbox-burger">
-			<label class="burger-block burger-blockr--main-header" for="burger-block__checkbox">
-				<i class="fa fa-bars"></i>
-			</label>
-			<a class="logo" href="#"><img src="./img/logo.png" alt="logo" width="138" height="70"></a>
-            <nav class="main-nav">
-                        <ul class="main-nav__list main-nav__list--left">
-                            <li class="main-nav__list-unit"><a href="#">Информация</a></li>
-                            <li class="main-nav__list-unit"><a href="#">Фото и видео</a></li>
-                        </ul>
-                        <ul class="main-nav__list main-nav__list--right">
-                            <li class="main-nav__list-unit"><a href="#">Карта штата</a></li>
-                            <li class="main-nav__list-unit"><a href="#">Гостиницы</a></li>
-                        </ul>
-            </nav>
+            <div class="main-header__wrap-top">
+                <input class="burger-block__checkbox" type="checkbox" id="burger-block__checkbox" name="checkbox-burger">
+                <label class="burger-block burger-blockr--main-header" for="burger-block__checkbox">
+                    <i class="fa fa-bars"></i>
+                </label>
+                <a class="logo" href="#"><img src="./img/logo.png" alt="logo" width="138" height="70"></a>
+                <nav class="main-nav">
+                            <ul class="main-nav__list main-nav__list--left">
+                                <li class="main-nav__list-unit"><a href="#">Информация</a></li>
+                                <li class="main-nav__list-unit"><a href="#">Фото и видео</a></li>
+                            </ul>
+                            <ul class="main-nav__list main-nav__list--right">
+                                <li class="main-nav__list-unit"><a href="#">Карта штата</a></li>
+                                <li class="main-nav__list-unit"><a href="#">Гостиницы</a></li>
+                            </ul>
+                </nav>
+            </div>
             <section class="main-header__decor">
-            	<img class="main-header__title"
-            	  srcset="            	"
-            	 alt="main-header__title">
+                <div class="main-header__welcome-picture-box">
+                    <picture class="main-header__welcome-picture">
+                        <source media="(min-width: 768px)" srcset="./img/welcome.png">					 
+                        <img src="./img/welcome-mobile.png"  alt="welcome-picture">	
+                    </picture>
+                </div>
+                <div class="main-header__border-picture"></div>
             </section>
          </header> 
-        <div class="content"></div>
+        <section class="content">
+            <section class="about-sedona">
+                <section class="about-sedona__title-block">
+                    <h1 class="about-sedona__title">Седона - небольшой городок в Аризоне, заслуживающий большего</h1>
+                    <p class="about-sedona__descr">Рассмотрим 5 причин, по которым седона лучше чем гранд каньон!</p>
+                    <div class="about-sedona__trianle"></div>
+                </section>
+                <section class="reasons-block">
+                    <article class="reasons-block__reason">
+                        <h3 class="reasons-block__title">Настоящий городок</h3>
+                        <span class="reasons-block__reason-number">1</span>
+                        <p class="reasons-block__descr">Седона не аттракцион для туристов. Там течет своя жизнь</p>
+                    </article>
+                    <div class="reasons-block__img reasons-block__img--left"></div>
+                </section>
+                <section class="advices-block">
+                    <article class="advices-block__advice">
+                        <div class="advices-block__img-block"></div>
+                        <h4 class="advices-block__title">Жилье</h4>
+                        <p class="advices-block__descr">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                    </article>
+                    <article class="advices-block__advice">
+                        <div class="advices-block__img-block"></div>
+                        <h4 class="advices-block__title">Еда</h4>
+                        <p class="advices-block__descr">Всегда заказывай фирменный бургер, вы не разочаруетесь!</p>
+                    </article>
+                    <article class="advices-block__advice">
+                        <div class="advices-block__img-block"></div>
+                        <h4 class="advices-block__title">Сувениры</h4>
+                        <p class="advices-block__descr">Не только китайского, но и местного производства!</p>
+                        </article>
+                </section>
+                <section class="reasons-block">
+                    <article class="reasons-block__reason">
+                        <h3 class="reasons-block__title">Там есть мост дьявола!</h3>
+                        <span class="reasons-block__reason-number">2</span>
+                        <p class="reasons-block__descr">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                    </article>
+                    <div class="reasons-block__img reasons-block__img--right"></div>
+                </section>
+                <section class="reasons-block">
+                    <article class="reasons-block__reason">
+                        <h3 class="reasons-block__title">Небольшая площадь</h3>
+                        <span class="reasons-block__reason-number">3</span>
+                        <p class="reasons-block__descr">Все достопримечательности находятся очень близко</p>
+                    </article>
+                    <article class="reasons-block__reason">
+                        <h3 class="reasons-block__title">Красивая дорога</h3>
+                        <span class="reasons-block__reason-number">4</span>
+                        <p class="reasons-block__descr">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                    </article>
+                    <article class="reasons-block__reason">
+                        <h3 class="reasons-block__title">Мало туристов</h3>
+                        <span class="reasons-block__reason-number">5</span>
+                        <p class="reasons-block__descr">Большинство едет в Гранд Каньон и толпится там</p>
+                    </article>
+                </section>
+            </section>
+            <!-- /.about-sedona -->
+        </section>
+        <!-- /.content -->
     </div>   
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-2.2.0.min.js"></script>

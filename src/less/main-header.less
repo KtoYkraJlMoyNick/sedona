@@ -1,9 +1,45 @@
 .main-header {
     position: relative;
-	height: 55px;
+    &__wrap-top {
+        min-height: 56px;
+    }
 	&__decor {
+        position: relative;
 		padding: 47px 0;
-		background: url("../img/bg.jpg") no-repeat 50% 50%;
+		background: url("../img/bg.jpg") no-repeat 0% 0%;
 		background-size: cover;
 	}
+    &__welcome-picture {
+        margin: 0 auto;
+        display: block;
+        width: 280px;
+    }
+    &__border-picture {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: url('../img/bg_border.png') no-repeat 50% 50%;
+        background-size: cover;
+        min-height: 25px;
+        width: 100%;
+    }
+    @media (min-width: 768px) {
+        &__welcome-picture {
+            width: 485px;
+        }
+        &__decor {
+            padding: 76px 0 84px;
+        }
+        &__border-picture {
+            min-height: 36px;
+        }
+    }
+    @media (min-width: 1200px) {
+        &__decor {
+            padding: 76px 0 84px;
+        }
+        &__border-picture {
+            min-height: 57px;
+        }
+    }
 }
